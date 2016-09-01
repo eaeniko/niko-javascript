@@ -4,7 +4,8 @@
 var trsPacientes = document.getElementsByClassName("paciente");
 
 var posicaoAtual = 0;
-while (posicaoAtual <= trsPacientes.length - 1) {
+
+for (var posicaoAtual = 0; posicaoAtual <= trsPacientes.length -1; posicaoAtual++) {
 
     var pacienteTr = trsPacientes[posicaoAtual];
 
@@ -30,5 +31,5 @@ while (posicaoAtual <= trsPacientes.length - 1) {
     } else {
         console.log("não executei");
     }
-    posicaoAtual++;
+
 }
