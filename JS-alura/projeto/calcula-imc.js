@@ -1,12 +1,17 @@
 // peso / altura * altura
 
-var peso = 100;
-var altura = 2.0;
-var diferenteDeZero = (altura != 0);
+var tdPeso = document.getElementById("peso-2");
+var tdAltura = document.getElementById("altura-2");
 
-if(diferenteDeZero) {
-	var imc = peso / (altura * altura);
+
+var paciente = {"peso": tdPeso.textContent, "altura": tdAltura.textContent};
+
+if(paciente.altura != 0) {
+	var imc = paciente.peso / (paciente.altura * paciente.altura);
+
+	var tdImc = document.getElementById("imc-2");
+	tdImc.textContent = imc;
 	console.log(imc);
 } else {
-	
+	console.log("não executei");
 }
