@@ -1,52 +1,59 @@
 // peso / altura * altura
 
+function calculaTodosImcs() {
+    var trsPacientes = document.getElementsByClassName("paciente");
 
+    var posicaoAtual = 0;
+    percorreArray(trsPacientes, imprimeEModificaTdDeImc);
 
-var trsPacientes = document.getElementsByClassName("paciente");
+    percorreArray(trsPacientes, function(pacienteTr) {
 
-var posicaoAtual = 0;
-percorreArray(trsPacientes, imprimeEModificaTdDeImc);
+        var pacienteTr = trsPacientes[posicaoAtual];
 
-percorreArray(trsPacientes, function(pacienteTr) {
+        var imc = pacienteAtual.pegaImc();
 
-    var pacienteTr = trsPacientes[posicaoAtual];
+        var tdImc = pacienteTr.getElementsByClassName("info-imc")[0];
+        var pacienteAtual = montaPaciente(pacienteTr);
+        tdImc.textContent = imc;
 
-    var imc = pacienteAtual.pegaImc();
+        console.log(imc);
+    });
 
-    var tdImc = pacienteTr.getElementsByClassName("info-imc")[0];
-    var pacienteAtual = montaPaciente(pacienteTr);
-    tdImc.textContent = imc;
+    function montaPaciente(pacienteTr) {
+        var tdNome = pacienteTr.getElementsByClassName("info-nome")[0];
+        var tdPeso = pacienteTr.getElementsByClassName("info-peso")[0];
+        var tdAltura = pacienteTr.getElementsByClassName("info-altura")[0];
+        var tdImc = pacienteTr.getElementsByClassName("info-imc")[0];
 
-    console.log(imc);
-});
-function montaPaciente(pacienteTr) {
-    var tdNome = pacienteTr.getElementsByClassName("info-nome")[0];
-    var tdPeso = pacienteTr.getElementsByClassName("info-peso")[0];
-    var tdAltura = pacienteTr.getElementsByClassName("info-altura")[0];
-    var tdImc = pacienteTr.getElementsByClassName("info-imc")[0];
-
-    var pacienteAtual = {
-        "nome": tdNome.textContent,
-        "peso": tdPeso.textContent,
-        "altura": tdAltura.textContent,
-        "pegaImc": function() {
-            if (this.altura != 0) {
-                var imc = this.peso / (this.altura * this.altura);
-                return imc;
-            } else {
-                console.log("não executei");
+        var pacienteAtual = {
+            "nome": tdNome.textContent,
+            "peso": tdPeso.textContent,
+            "altura": tdAltura.textContent,
+            "pegaImc": function() {
+                if (this.altura != 0) {
+                    var imc = this.peso / (this.altura * this.altura);
+                    return imc;
+                } else {
+                    console.log("não executei");
+                }
             }
         }
+        return pacienteAtual;
     }
-    return pacienteAtual;
+
+    function imprimeEModificaTdDeImc(pacienteTr) {
+
+        var pacienteAtual = montaPaciente(pacienteTr);
+        var imc = pacienteAtual.pegaImc();
+
+        var tdImc = pacienteTr.getElementsByClassName("info-imc")[0];
+        tdImc.textContent = imc;
+
+        console.log(imc);
+    }
 }
-function imprimeEModificaTdDeImc(pacienteTr){
 
-    var pacienteAtual = montaPaciente(pacienteTr);    
-    var imc = pacienteAtual.pegaImc();
+var botao = document.getElementById("calcula-imcs");
+//botao.onclick = calculaTodosImcs;
 
-    var tdImc = pacienteTr.getElementsByClassName("info-imc")[0]; 
-    tdImc.textContent = imc;
-
-    console.log(imc);
-}
+botao.addEventListener("click", calculaTodosImcs);
