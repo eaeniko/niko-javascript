@@ -1,6 +1,9 @@
 // peso / altura * altura
 
-function calculaTodosImcs() {
+var botao = document.getElementById("calcula-imcs");
+//botao.onclick = calculaTodosImcs;
+
+botao.addEventListener("click", function calculaTodosImcs() {
     var trsPacientes = document.getElementsByClassName("paciente");
 
     var posicaoAtual = 0;
@@ -51,9 +54,4 @@ function calculaTodosImcs() {
 
         console.log(imc);
     }
-}
-
-var botao = document.getElementById("calcula-imcs");
-//botao.onclick = calculaTodosImcs;
-
-botao.addEventListener("click", calculaTodosImcs);
+});
