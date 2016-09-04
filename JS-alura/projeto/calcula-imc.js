@@ -13,10 +13,10 @@ botao.addEventListener("click", function calculaTodosImcs() {
 
         var pacienteTr = trsPacientes[posicaoAtual];
 
-        var imc = pacienteAtual.pegaImc();
 
         var tdImc = pacienteTr.getElementsByClassName("info-imc")[0];
         var pacienteAtual = montaPaciente(pacienteTr);
+        var imc = pacienteAtual.pegaImc();
         tdImc.textContent = imc;
 
         console.log(imc);
