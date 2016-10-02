@@ -5,5 +5,7 @@ var criarPessoa = function (nome, idade) {
 	};
 };
 
+// var pedro = criarPessoa("Pedro", 20);
+
 console.log(criarPessoa("Pedro", 20));
 console.log(criarPessoa("Maria", 30));
