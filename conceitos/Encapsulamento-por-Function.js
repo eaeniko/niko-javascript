@@ -19,8 +19,8 @@ var createCounter = function() {
 		}
 	};
 };
-console.log(counter.value); 
-console.log(counter.add());
+console.log(counter.value); // undf
+console.log(counter.add()); //1
 
 
 // Usando Construtora
