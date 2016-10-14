@@ -1,2 +1,11 @@
 # niko-javascript
-Pasta destinada a todo o curso de JavaScript que estou fazendo na <src="https://github.com/NikolaiCinotti/niko-javascript/tree/master/JS-alura">plataforma Alura</src> e no <src="https://github.com/NikolaiCinotti/niko-javascript/tree/master/JsExpert">Curso de JavaScript Expert</src> na Udemy.
+# PT-BR
+ Conceitos esseciais em JavaScript. De um fork para ajudar.
+
+# English
+ Essential concepts in JavaScript. A fork to help.
+ 
+ 
+# Documentation - How to
+
+* [Factory Function] (https://github.com/NikolaiCinotti/niko-javascript/blob/master/conceitos/FuncaoFabrica.js)
