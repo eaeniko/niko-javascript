@@ -8,3 +8,4 @@ a[3] = "Palio";
 // in-line
 
 var car = ["Ka", "Corsa", "Palio"];
+
