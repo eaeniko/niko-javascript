@@ -15,6 +15,7 @@ carros.splice(1,1, "Sonic") // ["Corsa"]
 carros.toString(); // ["Ka", "Sonic", "Palio"]
 // substitui os elementos em uma posição com splice
 
+
 carros.splice(1,0, "Sonic") // []
 
 carros.toString(); // ["Ka", "Sonic", "Corsa, "Palio"]
