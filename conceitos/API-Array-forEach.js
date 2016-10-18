@@ -2,6 +2,7 @@ var carros = ["Ka", "Corsa", "Palio"];
 
 
 carros.forEach(function (elemento){
- //lógica
+  console.log(elemento); //lógica
 }); 
-
+//saida
+["Ka", "Corsa", "Palio"];
