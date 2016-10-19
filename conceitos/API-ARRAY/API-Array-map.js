@@ -5,7 +5,13 @@ carros[1] = {marca: "Chevrolet", modelo: "Corsa"};
 carros[2] = {marca: "Fiat", modelo: "Palio"};
 
 carros.map(function (elemento) {
-	return elemento.marca === "Ford";
-})
+	return elemento.marca;
+});
 
 //["Ford", "Chevrolet", "Fiat"]
+
+carros.map(function (elemento) {
+	return elemento.modelo.length;
+});
+
+// [2, 5, 5]
