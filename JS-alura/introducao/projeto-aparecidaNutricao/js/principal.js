@@ -13,4 +13,10 @@ console.log(paciente);
 console.log(peso);
 console.log(altura);
 
-var imc = peso / altura * altura;
+var tdImc = paciente.querySelector(".info-imc");
+
+
+var imc = peso / (altura * altura);
+console.log(imc);
+
+tdImc.textContent = imc;
