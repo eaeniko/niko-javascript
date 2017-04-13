@@ -40,3 +40,12 @@ for(var i = 0; i < pacientes.length; i++){
 	}
 }
 
+var botaoAdicionar = document.querySelector("#adicionar-paciente");
+botaoAdicionar.addEventListener("click", function() {
+	console.log("Botão clicado");
+});
+
+
+// ^ função anonima 
+//function mostraMensagem() {	~função normal~
+//	console.log("Olá eu fui clicado!");
