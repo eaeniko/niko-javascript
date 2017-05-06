@@ -22,11 +22,15 @@ botaoAdicionar.addEventListener("click", function(event) {
 	tabela.appendChild(pacienteTr);
 
 	form.reset();
+	var mensagensErro = document.querySelector("#mensagens-erro");
+	mensagensErro.innerHTML = "";
 
 });
 
 function exibeMensagensDeErro(errosPaciente){
 	var ul = document.querySelector("#mensagens-erro");
+	ul.innerHTML = "";
+
 	errosPaciente.forEach(function(erro){
 		var li = document.createElement("li");
 		li.textContent = erro;
@@ -83,9 +87,12 @@ function validaPaciente(paciente){
 	}
 
 	if(!validaPeso(paciente.peso)) erros.push("Peso inválido");
-
 	if(!validaAltura(paciente.altura)) erros.push("Altura inválida");
+	if(paciente.gordura.length == 0) erros.push("A gordura não pode ser em branco");
 
-return erros;
+	if(paciente.peso.length == 0) erros.push("O peso não pode ser em branco");
+	if(paciente.altura.length == 0) erros.push("A altura não pode ser em branco");
+
+	return erros;
 
 }
